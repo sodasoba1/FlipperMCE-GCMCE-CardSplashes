@@ -1,13 +1,6 @@
-# FlipperMCE-GCMCE-CardSplashes
-SD Card layout for FlipperMCE/GCMCE card splash `.bin` files (OLED images).
+# [GCN Database](https://sodasoba1.github.io/FlipperMCE-GCMCE-CardSplashes/)
 
-## Quick Start
-This repository provides a pre-configured `.bin` and `.ini` file structure for a basic SD card setup. 
-
-> [!IMPORTANT]
-> I strongly recommend reading the official documentation at [flippermce.github.io](https://flippermce.github.io/) before starting.
-
-# GameCube Translation / ROM Notes
+## GameCube Translation / ROM Notes
 
 ---
 
