@@ -19,7 +19,8 @@ Original images (before conversion) are located in `/CardSplashes-prebin`.
 * **Enhancements:** Many images have been manually edited to improve contrast, crispness, and legibility on small OLED screens.
 * **Conversion:** Files were generated using the [FlipperMCE Splash Generator](https://flippermce.github.io/splashgen/splashgen.html).
 
-
+# ID - DB
+[Game ID & Serial DB](https://sodasoba1.github.io/FlipperMCE-GCMCE-CardSplashes/)
 
 # GameCube Translation / ROM Notes
 
@@ -38,7 +39,7 @@ Original images (before conversion) are located in `/CardSplashes-prebin`.
 | PGSJ01 | メタルギア -Special Disc- | PGSE01 | Metal Gear Solid: The Twin Snakes: Special Disc |
 | G4NJDA | NARUTO -ナルト- 激闘忍者大戦！4 | SG4JDA | Naruto: Clash of Ninja 4 *(header very different)* |
 | GPZJ01 | NINTENDO パズルコレクション | GPZE01 | Nintendo Puzzle Collection |
-| GZBJB2 | ドラゴンボールZ | GZBEB2 | Zatch Bell! Go! Go! Mamodo Fight!! |
+| GABJB2 | 金色のガッシュベル!! ゴー!ゴー!魔物ファイト!! | GZBEB2 | Zatch Bell! Go! Go! Mamodo Fight!! |
 
 ---
 
@@ -92,7 +93,7 @@ CardSize=64
 - GM4E01 → Mario Kart: Double Dash!!  
   - GM4E64 → Mario Kart Double Dash!! Plus v2.0 
     - Uses Channel 2 → `DL-DOL-GM4E-USA-2.raw/bin`
-  - GMSE04 → M64 MKDD Extended v2.0  
+  - GM4E64 → M64 MKDD Extended v2.0  
     - Uses Channel 3 → `DL-DOL-GM4E-USA-3.raw/bin`
 	
 **SD Location:** `FlipperMCE/GCMCE`
