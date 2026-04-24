@@ -26,7 +26,7 @@ Original images (before conversion) are located in `/CardSplashes-prebin`.
 
 ---
 
-## Translation with Header Changed (NO CARD / BIN / RAW LOADS)
+## Translation with Header Changed (Memory Cards work with nightly #69 firmware)
 
 | JP ID | JP Title | EN ID | EN Title |
 |------|----------|-------|----------|
