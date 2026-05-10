@@ -1,0 +1,39 @@
+name: Create Automated Releases
+
+on:
+  push:
+    tags:
+      - "v*" # Triggers when you push a tag like v1.0.1
+  workflow_dispatch: # Allows manual trigger for testing
+
+permissions:
+  contents: write # Required to create a release and upload assets
+
+jobs:
+  create-release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout current repo
+        uses: actions/checkout@v4
+
+      # 1. Generate your local ZIP files exactly how you want them
+      - name: Create Local Zips
+        run: |
+          zip -r FlipperMCE-GCMCE-OLED-Suite.zip . -x "*.git*" ".github*"
+          zip -r FlipperMCE-GCMCE-OLED-Splash-FullGallery.zip MemoryCards/GC/ README.md
+          zip -r FlipperMCE-GCMCE-OLED-MinimalGallery.zip MemoryCards/GC/ README.md -x "*-[1-9]*.*"
+          zip -r FlipperMCE-GCMCE-OLED-IMAGES.zip CardSplashes-prebin/ README.md
+
+      # 2. Create the Release in THIS repo and attach the 4 ZIPs
+      - name: Create Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ github.ref_name }}
+          name: Release ${{ github.ref_name }}
+          draft: false
+          prerelease: false
+          files: |
+            FlipperMCE-GCMCE-OLED-Suite.zip
+            FlipperMCE-GCMCE-OLED-Splash-FullGallery.zip
+            FlipperMCE-GCMCE-OLED-MinimalGallery.zip
+            FlipperMCE-GCMCE-OLED-MinimalGallery.zip-Editor.zip
