@@ -16,7 +16,7 @@ jobs:
       - name: Checkout current repo
         uses: actions/checkout@v4
 
-      # 1. Generate your local ZIP files exactly how you want them
+      # 1. Generate your local ZIP files
       - name: Create Local Zips
         run: |
           zip -r FlipperMCE-GCMCE-OLED-Suite.zip . -x "*.git*" ".github*"
@@ -24,7 +24,7 @@ jobs:
           zip -r FlipperMCE-GCMCE-OLED-MinimalGallery.zip MemoryCards/GC/ README.md -x "*-[1-9]*.*"
           zip -r FlipperMCE-GCMCE-OLED-IMAGES.zip CardSplashes-prebin/ README.md
 
-      # 2. Create the Release in THIS repo and attach the 4 ZIPs
+      # 2. Create the Release and attach the ZIPs
       - name: Create Release
         uses: softprops/action-gh-release@v2
         with:
@@ -36,4 +36,4 @@ jobs:
             FlipperMCE-GCMCE-OLED-Suite.zip
             FlipperMCE-GCMCE-OLED-Splash-FullGallery.zip
             FlipperMCE-GCMCE-OLED-MinimalGallery.zip
-            FlipperMCE-GCMCE-OLED-MinimalGallery.zip-Editor.zip
+            FlipperMCE-GCMCE-OLED-IMAGES.zip
